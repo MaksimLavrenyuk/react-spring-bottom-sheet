@@ -1,3 +1,5 @@
+import { SpringConfig } from 'react-spring/renderprops-universal'
+
 export type SnapPointProps = {
   /**
    * The height of the sticky header, if there's one
@@ -150,6 +152,10 @@ export type Props = {
    * @default expandOnContentDrag === false
    */
   expandOnContentDrag?: boolean,
+  /**
+   * Advanced settings for fine control of animation
+   */
+  springConfig?: SpringConfig
 } & Omit<React.PropsWithoutRef<JSX.IntrinsicElements['div']>, 'children'>
 
 export interface RefHandles {
