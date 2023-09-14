@@ -3,6 +3,7 @@ const importFrom = path.resolve(__dirname, './defaults.json')
 
 module.exports = {
   plugins: {
+    'tailwindcss/nesting': {},
     tailwindcss: {},
     'postcss-custom-properties-fallback': { importFrom },
     // @TODO add importFrom to preset-env when CSS snapshot testing is in place
