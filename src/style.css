@@ -122,9 +122,10 @@
   padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
 
+
 [data-rsbs-is-dismissable='true'],
-[data-rsbs-is-dismissable='false']:matches([data-rsbs-state='opening'], [data-rsbs-state='closing']) {
-  & :matches([data-rsbs-header], [data-rsbs-scroll], [data-rsbs-footer]) > * {
+[data-rsbs-is-dismissable='false']:is([data-rsbs-state='opening'], [data-rsbs-state='closing']) {
+  & :is([data-rsbs-header], [data-rsbs-scroll], [data-rsbs-footer]) > * {
     opacity: var(--rsbs-content-opacity);
   }
   & [data-rsbs-backdrop] {
