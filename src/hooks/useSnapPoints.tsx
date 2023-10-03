@@ -6,9 +6,11 @@ import React, {
   useRef,
   useState,
 } from 'react'
+import { ResizeObserver, ResizeObserverEntry } from '@juggle/resize-observer'
 import type { defaultSnapProps, ResizeSource, snapPoints } from '../types'
 import { processSnapPoints, roundAndCheckForNaN } from '../utils'
 import { useReady } from './useReady'
+import { ResizeObserverOptions } from '@juggle/resize-observer/lib/ResizeObserverOptions'
 import { useLayoutEffect } from './useLayoutEffect'
 
 export function useSnapPoints({
