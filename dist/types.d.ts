@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { SpringConfig } from 'react-spring/renderprops-universal';
-export declare type SnapPointProps = {
+export type SnapPointProps = {
     /**
      * The height of the sticky header, if there's one
      */
@@ -22,18 +22,18 @@ export declare type SnapPointProps = {
      */
     maxHeight: number;
 };
-export declare type snapPoints = (props: SnapPointProps) => number[] | number;
+export type snapPoints = (props: SnapPointProps) => number[] | number;
 /**
  * `window` comes from window.onresize, maxheightprop is if the `maxHeight` prop is used, and `element` comes from the resize observers that listens to header, footer and the content area
  */
-export declare type ResizeSource = 'window' | 'maxheightprop' | 'element';
-export declare type defaultSnapProps = {
+export type ResizeSource = 'window' | 'maxheightprop' | 'element';
+export type defaultSnapProps = {
     /** The snap points currently in use, this can be controlled by providing a `snapPoints` function on the bottom sheet. */
     snapPoints: number[];
     /** The last snap point the user dragged to, if any. 0 if the user haven't interacted */
     lastSnap: number | null;
 } & SnapPointProps;
-export declare type SpringEvent = {
+export type SpringEvent = {
     type: 'OPEN';
 } | {
     type: 'CLOSE';
@@ -44,7 +44,7 @@ export declare type SpringEvent = {
     type: 'SNAP';
     source: 'dragging' | 'custom' | string;
 };
-export declare type Props = {
+export type Props = {
     /**
      * Ensure that whatever you put in here have at least 1px height, or else the bottom sheet won't open
      */

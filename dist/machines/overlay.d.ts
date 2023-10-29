@@ -51,7 +51,7 @@ interface OverlayStateSchema {
         };
     };
 }
-declare type OverlayEvent = {
+type OverlayEvent = {
     type: 'OPEN';
 } | {
     type: 'SNAP';

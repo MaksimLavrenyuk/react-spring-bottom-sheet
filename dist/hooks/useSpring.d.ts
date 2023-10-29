@@ -11,5 +11,5 @@ export declare function useSpring(): [import("react-spring").AnimatedValue<impor
     minSnap: unknown;
     maxSnap: unknown;
 }>];
-export declare type Spring = ReturnType<typeof useSpring>[0];
-export declare type SpringSet = ReturnType<typeof useSpring>[1];
+export type Spring = ReturnType<typeof useSpring>[0];
+export type SpringSet = ReturnType<typeof useSpring>[1];
