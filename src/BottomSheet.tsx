@@ -451,10 +451,11 @@ export const BottomSheet = React.forwardRef<
 
   useEffect(() => {
     const elem = scrollRef.current
+    console.log('elem', elem)
 
     const preventScrolling = e => {
       if (preventScrollingRef.current) {
-        e.preventDefault()
+        if (e.cancelable) e.preventDefault();
       }
     }
 
@@ -465,7 +466,7 @@ export const BottomSheet = React.forwardRef<
           elem.scrollTop = 0
           elem.style.removeProperty('overflow')
         })
-        e.preventDefault()
+        if (e.cancelable) e.preventDefault();
       }
     }
 
